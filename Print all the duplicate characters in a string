@@ -1,0 +1,11 @@
+void printDuplicateCharacters(string& S) {
+    unordered_map<char, int> m;
+    for (char i : S) {
+        m[i]++;
+    }
+    for (const auto& x : m) {
+        if (x.second > 1) {
+            cout << x.first << ": " << x.second << endl;
+        }
+    }
+}
